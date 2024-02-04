@@ -1,0 +1,19 @@
+1. What exactly is the role of a UI developer?
+
+2. What’s the difference between a UI developer and a UX developer?
+
+3. What’s the difference between a UI developer and a front-end developer?
+
+4. What kind of skills do you think are crucial for a successful UI developer?
+
+5. Name three ways to reduce a page’s load time.
+
+6. What is HTML?
+
+7. What is Semantic HTML?
+
+8. Name at least three position property attributes.
+
+9. How do you optimize a website's assets?
+
+10. What things must you be wary of when designing or developing multilingual sites?

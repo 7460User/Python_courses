@@ -1,0 +1,54 @@
+#Program for implementing AOP Operation by using match case with menu driven Procedure
+#MatchCaseEx1.py
+print("-"*50)
+print("\tAirthmetic Operator")
+print("-"*50)
+print("\t1.Addition")
+print("\t2.Subtraction")
+print("\t3.Multiplication")
+print("\t4 Division")
+print("\t5.Modulo Div")
+print("\t6.Exponentiation")
+print("\t7.exit")
+print("-"*50)
+kvr=int(input("Enter Your Choice:"))
+match(kvr):
+	
+	case 1: a=float(input("Enter your Value:"))
+            b=float(input("Enter your Scound Value:"))
+			print("sum({},{})={}".format(a,b,a+b))
+	case 2:
+            a=float(input("Enter Your First Value sub:"))
+            b=float(input("Enter Your Sceound Valu sub:"))
+			print("sub({},{})={}".format(a,b,a-b))
+
+	case 3:
+		    a=float(input("Enter Your First Value sub:"))
+            b=float(input("Enter Your Sceound Valu sub:"))
+			print("sub({},{})={}".format(a,b,a-b))
+
+	case 4:
+		    a=float(input("Enter Your First Value sub:"))
+            b=float(input("Enter Your Sceound Valu sub:"))
+			print("sub({},{})={}".format(a,b,a-b))
+
+	case 5:
+		    a=float(input("Enter Your First Value sub:"))
+            b=float(input("Enter Your Sceound Valu sub:"))
+			print("sub({},{})={}".format(a,b,a-b))
+
+	case 6: 
+		    a=float(input("Enter Your First Value sub:"))
+            b=float(input("Enter Your Sceound Valu sub:"))
+			print("sub({},{})={}".format(a,b,a-b))
+
+	case 7:
+		    a=float(input("Enter Your First Value sub:"))
+            b=float(input("Enter Your Sceound Valu sub:"))
+			print("sub({},{})={}".format(a,b,a-b))
+
+	case _:
+		print("Ur Selection of Operation sis wrong:")	
+
+print("Other statements")
+		
