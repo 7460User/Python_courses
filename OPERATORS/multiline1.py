@@ -1,0 +1,5 @@
+a,b=input("Enter a value a:"),input("Enter a value of b:")
+print("-"*40)
+print("original value of a={}".format(a))
+print("original value of a={}".format(b))
+print("-"*40)
