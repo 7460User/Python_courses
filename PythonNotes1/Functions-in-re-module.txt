@@ -1,5 +1,5 @@
 		==========================================
-				Pre-defined Functions in re module
+		 Pre-defined Functions in re module
 		==========================================
 =>The 're' module contains the follwing essential Functions.
 ----------------------------------------------------------------------------------------------
