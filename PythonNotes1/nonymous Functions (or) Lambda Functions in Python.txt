@@ -1,0 +1,27 @@
+===================================================
+Anonymous Functions (or) Lambda Functions in Python
+===================================================
+=>Anonymous Functions are those which does not contain any name
+"=>The Purpose of Anonymous Functions is that "" To Perform Instant Operations """
+=>Instant Operations are those which are used at point of time only and no longer interested to use in other part of Project.
+"=>To develop Instant Operation by using Anonymous Functions, we use a key word lambda. In Otherwords to define Anonymous Functions, we use lambda keyword. hence"
+Anonymous Functions are called Lambda Functions.
+=>Anonymous Functions contains Single Executable Statement but never contains multiple block of statements.
+=>Anonymous Functions returns the result automatically or implcitly (No need to use return statement).
+--------------------------------------------------------------------------------------------------------------
+Syntax:              varname=lambda params-list : Statement
+------------------------------------------------------------------------------------------------------------
+Explanation:
+------------------
+"=>Varname is one of the valid variable name and treated as Function Name and it is an object of <class, 'function'>"
+=>lambda is a keyword and it is used for defining Anonymous Functions.
+=>params-list represents list of variable names used for holding the values coming from Function Calls
+=>Statement represents Single Executable Statement and whose values returns automatically or implicitly.
+-------------------------------------------------------------------------------------------------------------------------
+Function for addition of two numbers
+-------------------------------------------------------------------------------------------------------------------------
+"def  sumop(a,b):                                                       kvr=lambda a,b:a+b c=a+b"
+return c
+#main program                                                          #main program
+"res=sumop(10,20)                                                     res=kvr(100,200)"
+print(res) # 30                                                           print(res) # 30

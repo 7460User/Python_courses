@@ -1,0 +1,80 @@
+                  ============================================
+                                        2) bytes
+                  ============================================
+Properties:
+-------------------
+=>'bytes' is one of the pre-defined class and treated as Sequence Data Type.
+=>The real time implementation or the purpose of bytes data type is that "To send the data
+   between to devices in the for form cipher Text / Encrypted format(End-to-End Encryption)".
+=>To achieve the real time implementation or the purpose of bytes, the bytes data type stores
+    the Numerical Possitive Integer values from the range (0,256) only.
+=>bytes data type does not contain any symbolic notation for storing data directly but we can
+   convert other type of values into bytes by using bytes().
+                    Syntax:
+                    ----------- varname=bytes(object)
+                    here varname is of type <class,'bytes'>
+
+=>An object bytes data type allows us to perform Indexing and Slicing Operations.
+=>An object of bytes maintains Insertion Order ( In whichever Order, we insert the data, In the
+    same order the data will be displayed )
+=>An object bytes belongs to immutable
+-----------------------------------------------------------------------------------------------------------------------
+Examples:
+-----------------------------------------------------------------------------------------------------------------------
+>>> l=[10,20,30,256,0,45]
+>>> print(l,type(l))-------------[10, 20, 30, 256, 0, 45] <class 'list'>
+>>> b=bytes(l)--------------ValueError: bytes must be in range(0, 256)
+>>> l=[-10,20,30,255,0,45]
+>>> print(l,type(l))------------[-10, 20, 30, 255, 0, 45] <class 'list'>
+>>> b=bytes(l)-----------ValueError: bytes must be in range(0, 256)
+--------------------------------------------
+>>> l=[10,20,30,255,0,45]
+>>> print(l,type(l))----------------[10, 20, 30, 255, 0, 45] <class 'list'>
+>>> b=bytes(l)
+>>> print(b,type(b))------------b'\n\x14\x1e\xff\x00-' <class 'bytes'>
+>>> b[0]-------------------10
+>>> b[-1]-----------------45
+>>> b[-5]----------------20
+>>> b[-50]--------------IndexError: index out of range
+>>> b[0:4]---------------b'\n\x14\x1e\xff'
+>>> for k in b:
+... print(k)
+...
+                              10
+                              20
+                        30
+                        255
+                        0
+                        45
+>>> for k in b[0:4]:
+... print(k)
+                        ...
+                        10
+                        20
+                        30
+                        255
+>>> for k in b[::-1]:
+... print(k)
+                                       ...
+                                       45
+                                       0
+                                       255
+                                       30
+                                       20
+                                       10
+-----------------------------------------------------------------------------------------
+>>> l1=[10,20,30,40]
+>>> b1=bytes(l1)
+>>> print(b1,type(b1),id(b1))----------------b'\n\x14\x1e(' <class 'bytes'> 2465659515648
+>>> b1[0]------------------------10
+>>> for k in b1:
+... print(k)
+                              ...
+                              10
+                              20
+                              30
+                              40
+>>> b1[0]=125 # Trying to Update the value of bytes object
+                              TypeError: 'bytes' object does not support item assignment
+==================================X===================================
+

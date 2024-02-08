@@ -1,0 +1,67 @@
+		======================================
+			global key word  
+		======================================
+=>When we want MODIFY the GLOBAL VARIABLE values in side of function defintion  then global variable names must be preceded with 'global' keyword otherwise we get "UnboundLocalError: local variable names referenced before assignment"
+
+Syntax:
+-----------
+	var1=val1
+	var2=val2
+	var-n=val-n    #  var1,var2...var-n are called global variable names.
+	------------------
+	def   fun1():
+		------------------------
+		global var1,var2...var-n
+		# Modify var1,var2....var-n
+	    --------------------------
+	def   fun2():
+	       ------------------------
+	        global var1,var2...var-n
+	     # Modify var1,var2....var-n
+	    --------------------------
+
+
+Examples:
+-----------------------
+#globalvarex1.py
+a=10
+def  access1():
+	print("Val of a=",a) # Here we are accessing the global variable 'a' and No Need to use global kwd.
+
+#main program
+access1()
+---------------------------------------
+#globalvarex2.py
+a=10
+def  access1():
+	global a  # refering global Varaible before its updation / Modification
+	a=a+1 # Here we are modifying the global variable value then we need to use global						keyword.
+	print("Val of a inside of access1()=",a) # 11
+#main program
+print("Val of a in main before access1():",a) # 10
+access1()
+print("Val of a in main after access1():",a) # 11
+---------------------------------------------------------------------------------
+Examples:
+------------------
+#globalvarex3.py
+def  update1():
+	global a,b # refering global Variables.
+	a=a+1  #updating global Variable a
+	b=b+1  #updating global Variable b
+def update2():
+	global a,b  # refering global Variables.
+	a=a*10 #updating global Variable a
+	b=b*10 #updating global Variable b
+
+#main program
+a,b=1,2  # here a and b are called Global Variables
+print("Val of a={} and Value of b={} in main program before update functions :".format(a,b))
+#  Val of a=1 and Value of b=2 in main program before update functions :
+update1()
+print("Val of a={} and Value of b={} in main program after update1():".format(a,b))
+#Val of a=2 and Value of b=3 in main program after update1():
+update2()
+print("Val of a={} and Value of b={} in main program after update2():".format(a,b))
+#Val of a=20 and Value of b=30 in main program after update1():
+================================X=====================================

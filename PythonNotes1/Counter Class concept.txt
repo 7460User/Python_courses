@@ -1,0 +1,95 @@
+﻿		===============================
+			Counter
+		===============================
+Index
+----------
+=>What is Python Counter?
+=>Why use Python Counter?
+=>Counter with String
+=>Counter with List
+=>Counter with Dictionary
+=>Counter with Tuple
+=>Counter with Set
+=>Accessing, Initializing and Updating Counters
+=>Deleting an Element from Counter
+=>Methods Available on Python Counter
+=>Reassigning Counts in Python
+=>Get and set the count of Elements using Counter
+-----------------------------------------------
+=>Python Counter is a container that will hold the count of each of the elements present in the container. The counter is a sub-class available inside the dictionary class.
+-------------------------------------------------
+Uses Python Counter
+--------------------------
+=>The Counter holds the data in an unordered collection.
+=>The elements here represent the keys and the count as values.
+=>It allows you to count the items in an iterable list.
+=>Arithmetic operations like addition, subtraction, intersection, and union can be easily performed  on a Counter.
+=>A Counter can also count elements from another counter
+----------------------------------------------------------
+Syntax:
+-------------
+Varname=collections.counter(Iterable object)
+=>Varname is an object of <class 'collections.Counter'>
+=>Iterable object can be list, tuple, dictionary, string
+---------------------------------------------------------
+Example1:
+       from collections import Counter
+       list1 = ['x','y','z','x','x','x','y', 'z']
+       print(Counter(list1)) # Counter({'x': 4, 'y': 2, 'z': 2})
+---------------------------------------------------------------------------------------
+Example2:
+from collections import Counter
+dict1 =  {'x': 4, 'y': 2, 'z': 2, 'z': 2}
+print(Counter(dict1))  # Counter({'x': 4, 'y': 2, 'z': 2})
+------------------------------------------------------------------------------
+Example3
+from collections import Counter
+c=Counter("MIssisipi")
+print(c) # Counter({'s': 3, 'i': 3, 'M': 1, 'I': 1, 'p': 1})
+------------------------------------------------------------------------------
+Example4:
+from collections import Counter
+tuple1 = ('x','y','z','x','x','x','y','z')
+print(Counter(tuple1)) # Counter({'x': 4, 'y': 2, 'z': 2})
+------------------------------------------------------------------------------
+=>Methods Available on Python Counter
+------------------------------------------
+The methods available with Counter are:
+
+1) elements() : This method will return you all the elements with count >0. Elements with 0 or -1 count will not be returned.
+      Examples:
+      ----------
+      		d = Counter( a = 2, b = 3, c = 6, d = 1, e = 5)
+		for i in d.elements():
+		    print ( i, end = " ")  # a a b b b c c c c c c d e e e e e 
+
+2) most_common(value): This method will return you the most common elements from Counter list.
+	c=Counter({'x': 5, 'y': 12, 'z': -2, 'x1':0})
+	ce = c.most_common(2)
+	print(ce) # [('y', 12), ('x', 5)]
+print(common_element)
+3) subtract(): This method is used to deduct the elements from another Counter.
+       Examples:
+                from collections import Counter
+		c1 = Counter(A=4,  B=3, C=10)
+		c2 = Counter(A=10, B=3, C=4)
+  		c1.subtract(c2)
+		print(c1)  # Counter({'c': 6, 'B': 0, 'A': -6})
+4) update(): This method is used to update the elements from another Counter.
+		from collections import Counter
+		coun = Counter()
+		coun.update([1, 2, 3, 1, 2, 1, 1, 2])
+		print(coun)  # Counter({1: 4, 2: 3, 3: 1})
+		coun.update([1, 2, 4])
+		print(coun) # Counter({1: 5, 2: 4, 3: 1, 4: 1})
+5) total()---> This Function is used for adding all the occurences of Counter 
+                  Values.
+Examples:
+---------------------
+	s="MISSISSIPPI" 
+	c=Counter(s) 
+	print("content of c=",c) # content of c= Counter({'I': 4, 'S': 4, 'P': 2, 'M': 1})
+	t=c.total()
+	print("Total=",t) # Total=11
+------------------------------------------------------------------------------------------------------------
+
