@@ -6,6 +6,7 @@ for i in l1:
     else:
         count_dict[i]=1
 print(count_dict)         
+print("hi mr.govind kumar:")
 
 
         
