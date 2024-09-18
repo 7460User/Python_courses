@@ -8,5 +8,5 @@ for i in l1:
 print(count_dict)         
 print("hi mr.govind kumar:")
 
-
+print("non tchnology")
         
